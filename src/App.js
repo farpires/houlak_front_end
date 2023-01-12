@@ -1,8 +1,10 @@
-
+import Home from "./page/home/home";
 
 function App() {
   return (
-    <h1>Spotify Search</h1>
+    <div className="container">
+      <Home />
+    </div>
   );
 }
 
