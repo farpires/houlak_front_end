@@ -1,5 +1,5 @@
-
 import getAlbums from "../../services/albums";
+import saveInformation from "../../services/saveInformation";
 import HomeTemp from "./Home.template";
 import { useEffect, useState } from "react";
 
@@ -13,6 +13,7 @@ const Home = () => {
     getAlbums(artist).then((result)=>{
       setLoading(false)
       setAlbums(result);
+      saveInformation(result)
     })
   },[artist]);
 
